@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QRCODE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- bootstrao js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- font awesome   -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.js" integrity="sha256-88jMrJXLHf3LcvWt3x0AQv8d4UGQTtXi4ul5fiq9KGE=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.css" integrity="sha256-BbKecxrFo+Ecew/N4HhSlsVkNCvNiDHJySBsqWciTYg=" crossorigin="anonymous" />
+
+
+    <!-- librerie -->
+    <script src="/qr-code/qrcode-lib/jsqr-worker.js"></script>
+    <script src="/qr-code/qrcode-lib/jsqr.js"></script>
+    <link href="/qr-code/qrcode-lib/qr-code.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="container text-center">
+    <h1>jsQR - Simple Demo</h1>
+
+    <div class="row">
+        <div class="col">
+            <input type="text"
+                   id="codice"
+                   class="form-control"
+                   placeholder="Code"
+                   aria-label="Code"
+                   aria-describedby="codice">
+        </div>
+        <div class="col-auto">
+            <button class="btn btn-light" onclick="click_qr_start()">
+                <i class="fas fa-qrcode"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div id="canvas-container" hidden>
+    <canvas id="canvas" ></canvas>
+    <button id="btn-close" class="btn btn-danger" onclick="click_qr_quit()">
+        <i class="fas fa-times"></i>
+    </button>
+</div>
+
+</body>
+</html>
